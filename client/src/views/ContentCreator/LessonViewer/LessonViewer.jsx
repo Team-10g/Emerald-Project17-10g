@@ -7,7 +7,7 @@ import {
 } from "../../../Utils/requests";
 import ActivityEditor from "../ActivityEditor/ActivityEditor";
 
-export default function LessonEditor({
+export default function LessonViewer({
   learningStandard,
   viewing,
   setViewing,
@@ -28,6 +28,26 @@ export default function LessonEditor({
     content: "",
     objectives: "",
   });
+  const [lessons, setLessons] = useState([]); 
+
+
+  useEffect(() => {
+    const fetchLessons = async () => {
+      try {
+        const response = await getLessonModule(); 
+        setLessons(response.data); 
+      } catch (error) {
+        console.error("Error fetching lessons:", error);
+
+      }
+    };
+
+    fetchLessons();
+  }, []);
+
+  useEffect(() => {
+    setDisplayName(learningStandard.name);
+  }, [learningStandard.name]);
 
   const showModal = async () => {
     setVisible(true);
@@ -38,11 +58,6 @@ export default function LessonEditor({
     setLink(res.data.link);
     setLinkError(false);
   };
-
-  useEffect(() => {
-    setDisplayName(learningStandard.name);
-  }, [learningStandard.name]);
-
 
   const addNewLesson = async () => {
     console.log("Adding new lesson:", newLesson);
@@ -97,6 +112,16 @@ export default function LessonEditor({
           tab={tab}
         />
       )}
+
+      <div>
+        {lessons.map((lesson, index) => (
+          <div key={index}>
+            <h3>{lesson.title}</h3>
+            <p>{lesson.content}</p>
+
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
