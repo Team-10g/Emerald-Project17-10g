@@ -1,3 +1,26 @@
+Lesson creation and editing - we developed the means for teachers to create, store, and edit lessons via a user-friendly graphical interface
+
+Viewing a lesson created a page that shows all the available lessons that other teachers have made; this page excludes lessons made by the teacher who is logged in
+
+Lesson deletion - we created a simple button for deleting a lesson, but also included a confirmation/warning message for deletion
+
+Unit creation - we implemented unit creation with four text fields, allowing the teacher to enter the unit name, standards ID, standards description, and unit number
+
+Unit deletion - similar to lesson deletion, we gave the teachers a way to delete units
+
+Sharing a lesson with other teachers - we implemented a way for teachers to share a lesson that they have created with other teachers by selecting which teacher to share with
+
+Receiving a shared lesson - we also implemented the receiving end of lesson sharing: a page that shows all lessons that have been shared with the receiving teacher
+
+Activity creation and deletion - we developed the feature allowing teachers to add and remove activities from a given lesson
+
+Transferring a student - we added a button to the classroom roster for moving students; this button triggers a pop-up that allows the teacher to choose which of their classes to move the given student to (this effectively adds that student to the chosen class and removes the student from the current class)
+
+
+==================================================================================================================================================================================================================================================================
+==================================================================================================================================================================================================================================================================
+==================================================================================================================================================================================================================================================================
+
 # CaSMM
 
 > Computation and Science Modeling through Making
