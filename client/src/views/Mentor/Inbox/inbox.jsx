@@ -239,6 +239,7 @@ export default function Inbox() {
     // remove from inbox
     const discard = async ()=>{
       const user = JSON.parse(sessionStorage.getItem('user'));
+      console.log(user);
       const res = await removeLesson(user.id, selectedLesson);
       const box = document.getElementsByName(`${selectedLesson.name}`)
       if(res){

@@ -90,9 +90,18 @@ module.exports = {
             error: 'ValidationError',
           });
 
+        let newId;
+        if(id == 9){
+          newId=6;
+        }
+        else{
+          newId=id;
+        }
+
+        const existingMentor = await strapi.services.mentor.findOne({ id:newId });
+
       
         // Retrieve the existing mentor data
-        const existingMentor = await strapi.services.mentor.findOne({ id });
 
         console.log(itemToRemove)
       
@@ -104,7 +113,7 @@ module.exports = {
       
         // Update the mentor with the modified inbox
         const updatedMentor = await strapi.services.mentor.update(
-          { id },
+          { id:newId },
           { inbox: updatedInbox }
         );
       
