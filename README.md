@@ -40,32 +40,6 @@ Transferring a student - we added a button to the classroom roster for moving st
 
 
 # Instructions for how to run the project locally
-
-# How to update database and server connections
-
-# Update the database and STRAPI dump files in your file directory
-
-# Outstanding work
-
-# Built Upon
-No libraries were added in this project.
-
-
-==================================================================================================================================================================================================================================================================
-==================================================================================================================================================================================================================================================================
-==================================================================================================================================================================================================================================================================
-
-# CaSMM
-
-> Computation and Science Modeling through Making
-
-Cloud-based programming interface
-
-![Deploy Staging](https://github.com/STEM-C/CaSMM/workflows/Deploy%20Staging/badge.svg)
-![Deploy Production](https://github.com/STEM-C/CaSMM/workflows/Deploy%20Production/badge.svg)
-
-<br/>
-
 ## Application
 
 ### `client` 
@@ -146,54 +120,9 @@ The production environment is a Heroku app. It is composed of a web dyno, compil
 
 `casmm` is automatically built from the latest commits to `master`. Heroku runs the container orchestration from there.
 
-<br/>
 
-## Maintenance
+# Outstanding work
+Remaining work includes the progress tracker and saving another teacher's lesson.
 
-All three components of the application have their own dependencies managed in their respective `package.json` files. Run `npm outdated` in each folder to see what packages have new releases. Before updating a package (especially new major versions), ensure that there are no breaking changes. Avoid updating all of the packages at once by running `npm update` because it could lead to breaking changes. 
-
-### Strapi
-
-This is by far the largest and most important dependency we have. Staying up to date with its [releases](https://github.com/strapi/strapi/releases) is important for bug/security fixes and new features. When it comes to actually upgrading Strapi make sure to follow the [migration guides](https://docs-v3.strapi.io/developer-docs/latest/update-migration-guides/migration-guides.html#v3-guides)!
-
-<br/>
-
-## CI/CD
-
-All of the deployments and releases are handled automatically with [GitHub Actions](https://docs.github.com/en/actions). The workflows implement custom [Actions](https://github.com/STEM-C/CaSMM/actions) that live in the [auto](https://github.com/STEM-C/auto) repo.
-
-<br/>
-
-## Contributing
-
-### Git Flow 
-
-> We will follow this git flow for the most part — instead of individual release branches, we will have one to streamline staging deployment 
-
-![Git Flow](https://nvie.com/img/git-model@2x.png)
-
-### Branches
-
-#### Protected
-
-> Locked for direct commits — all commits must be made from a non-protected branch and submitted via a pull request with one approving review
-
-- **master** - Production application
-
-#### Non-protected
-
-> Commits can be made directly to the branch
-
-- **release** - Staging application
-- **develop** - Working version of the application
-- **feature/<`scaffold`>-<`feature-name`>** - Based off of develop
-  - ex. **feature/cms-strapi**
-- **hotfix/<`scaffold`>-<`fix-name`>** - Based off of master
-  - ex. **hotfix/client-cors**
-
-### Pull Requests
-
-Before submitting a pull request, rebase the feature branch into the target branch to resolve any merge conflicts.
-
-- PRs to **master** should squash and merge
-- PRs to all other branches should create a merge commit
+# Built Upon
+No libraries were added in this project.
