@@ -1,4 +1,4 @@
-#List of all project features implemented
+# List of all project features implemented
 Lesson creation and editing - we developed the means for teachers to create, store, and edit lessons via a user-friendly graphical interface
 
 ![Picture1](https://github.com/Team-10g/Emerald-Project17-10g/assets/100709261/74f3eee6-9de2-4418-9250-66ba987e7d51)
